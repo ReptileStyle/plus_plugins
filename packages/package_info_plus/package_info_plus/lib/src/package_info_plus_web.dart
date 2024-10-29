@@ -86,7 +86,7 @@ class PackageInfoPlusWebPlugin extends PackageInfoPlatform {
   }
 
   Future<Response> _getResponse(Uri uri) async {
-    return _client == null ? await get(uri) : await _client.get(uri);
+    return _client == null ? await get(uri) : await _client!.get(uri);
   }
 
   Map<String, dynamic>? _decodeVersionMap(Response response) {
